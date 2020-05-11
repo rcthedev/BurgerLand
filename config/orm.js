@@ -10,7 +10,7 @@ let orm = {
         });
     },
     create: function(burgerName, value, cb) {
-        let queryStr = "INSERT INTO " + burgerName + " (burger_name, devoured) VALUES ('" + vale[0] + "', 0);"
+        let queryStr = "INSERT INTO " + burgerName + " (burger_name, devoured) VALUES ('" + value[0] + "', 0);"
         
         
 

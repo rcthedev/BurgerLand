@@ -1,0 +1,31 @@
+<h1>Funky Burger Eats!</h1>
+
+<img class="burger-icon" src="/assets/img/hamburger-4129616_640.jpg" alt="burger logo">
+
+<div class="burgerWrapper">
+    <ul>
+        <h2>Burgers to munch</h2>
+        {{#each funkyburgers}}
+            {{#unless devoured}}
+                <li>{{burger_name}}
+                    <button data-id="{{this.id}}" class="minibutton">Devour!</button>
+                </li>
+            {{/unless}}
+        {{/each}}
+    </ul>
+
+    <ul>
+        <h2>Burgers Done</h2>
+        {{#each funkyburgers}}
+            {{#if devoured}}
+                <li>{{ burger_name }}</li>
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<form class="burger-entry">
+    <input type="textarea" id="newBurger" name="burger-name"></input>
+    <button type="submit" class="addBurger">Add Burger</button>
+    <p>Enter your FunkyBurger by clicking submit.</p>
+</form>
