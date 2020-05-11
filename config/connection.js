@@ -14,6 +14,7 @@ if (process.env.JAWSDB_URL) {
         database: 'burgerland_db'
     });
 };
+// let mysql = require('mysql');
 
 // make connection
 connection.connect(function(err) {
